@@ -1,6 +1,6 @@
 package it.polito.tdp.meteo.model;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Rilevamento {
 	
@@ -8,9 +8,9 @@ public class Rilevamento {
 	private Date data;
 	private int umidita;
 
-	public Rilevamento(String localita, Date data, int umidita) {
+	public Rilevamento(String localita, Date date, int umidita) {
 		this.localita = localita;
-		this.data = data;
+		this.data = date;
 		this.umidita = umidita;
 	}
 
@@ -38,15 +38,15 @@ public class Rilevamento {
 		this.umidita = umidita;
 	}
 
-	// @Override
-	// public String toString() {
-	// return localita + " " + data + " " + umidita;
-	// }
-
 	@Override
 	public String toString() {
-		return String.valueOf(umidita);
+	return localita + " " + data + " " + umidita;
 	}
+
+	/*@Override
+	public String toString() {
+		return String.valueOf(umidita);
+	}*/
 
 	
 
